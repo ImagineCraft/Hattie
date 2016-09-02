@@ -1,0 +1,16 @@
+name: Hattie
+author: JacobCZ
+version: 1.0
+main: cz.sycha.hattie.Main
+
+commands:
+  hat:
+    usage: /hat
+    description: Puts the currently held item on your head
+    permission: hattie.use
+    permission-message: Your are not allowed to do this!
+
+permissions:
+  hattie.use:
+    description: Allows you to use /hat
+    default: op
