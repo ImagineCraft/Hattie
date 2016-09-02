@@ -26,7 +26,7 @@ public class Main extends JavaPlugin {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player)) {
-            sender.sendMessage(ChatColor.RED + "This command can only be sued by online players!");
+            sender.sendMessage(ChatColor.RED + "This command can only be used by online players!");
             return true;
         }
 
