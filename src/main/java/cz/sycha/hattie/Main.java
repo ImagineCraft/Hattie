@@ -20,7 +20,7 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        log.info(ChatColor.RED + "[Hattie] - Enabling plugin");
+        log.info(ChatColor.RED + "[Hattie] - Disabling plugin");
     }
 
     @Override
