@@ -9,17 +9,6 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
-    private Logger log = Logger.getLogger("minecraft");
-
-    @Override
-    public void onEnable() {
-        log.info(ChatColor.AQUA + "[Hattie] - Enabling plugin");
-    }
-
-    @Override
-    public void onDisable() {
-        log.info(ChatColor.RED + "[Hattie] - Disabling plugin");
-    }
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
