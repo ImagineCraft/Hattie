@@ -8,8 +8,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.util.logging.Logger;
-
 public class Main extends JavaPlugin {
 
     @Override
@@ -21,7 +19,7 @@ public class Main extends JavaPlugin {
 
         Player player = (Player) sender;
 
-        if(command.getName().equalsIgnoreCase("/hat") && sender.hasPermission("hattie.use")) {
+        if(command.getName().equalsIgnoreCase("hat") && sender.hasPermission("hattie.use")) {
             PlayerInventory inv = player.getInventory();
             ItemStack itemToUse = inv.getItemInMainHand();
             ItemStack oldItem = inv.getHelmet();
