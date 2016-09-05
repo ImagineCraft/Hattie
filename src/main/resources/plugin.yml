@@ -1,5 +1,5 @@
 name: Hattie
-author: JacobCZ
+authors: [JacobCZ, beschio]
 version: 1.0
 main: cz.sycha.hattie.Main
 
