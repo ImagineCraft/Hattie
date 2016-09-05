@@ -25,8 +25,8 @@ public class Main extends JavaPlugin {
             ItemStack oldItem = inv.getHelmet();
 
             inv.setHelmet(itemToUse);
-            inv.remove(itemToUse);
-            inv.addItem(new ItemStack[] { oldItem });
+            inv.setItem(inv.getHeldItemSlot(), null);
+            if (!(oldItem== null)) inv.addItem(oldItem);
 
             player.sendMessage(ChatColor.AQUA + "The item in your hand has been put on your head!");
 
