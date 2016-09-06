@@ -19,19 +19,16 @@ public class Main extends JavaPlugin {
 
         Player player = (Player) sender;
 
-        if(command.getName().equalsIgnoreCase("hat") && sender.hasPermission("hattie.use")) {
-            PlayerInventory inv = player.getInventory();
-            ItemStack itemToUse = inv.getItemInMainHand();
-            ItemStack oldItem = inv.getHelmet();
+        PlayerInventory inv = player.getInventory();
+        ItemStack itemToUse = inv.getItemInMainHand();
+        ItemStack oldItem = inv.getHelmet();
 
-            inv.setHelmet(itemToUse);
-            inv.remove(itemToUse);
-            if (oldItem != null) inv.addItem(new ItemStack[] { oldItem });
+        inv.setHelmet(itemToUse);
+        inv.remove(itemToUse);
+        if (oldItem != null) inv.addItem(new ItemStack[] { oldItem });
 
-            player.sendMessage(ChatColor.AQUA + "The item in your hand has been put on your head!");
+        player.sendMessage(ChatColor.AQUA + "The item in your hand has been put on your head!");
 
-            return true;
-        }
-        return false;
+        return true;
     }
 }
