@@ -20,11 +20,17 @@ public class Main extends JavaPlugin {
         Player player = (Player) sender;
 
         PlayerInventory inv = player.getInventory();
-        ItemStack itemToUse = inv.getItemInMainHand();
+        ItemStack itemToUse = inv.getItemInMainHand().clone();
+        itemToUse.setAmount(1);
         ItemStack oldItem = inv.getHelmet();
 
         inv.setHelmet(itemToUse);
-        inv.remove(itemToUse);
+        if (inv.getItemInMainHand().getAmount() > 1) {
+        	inv.getItemInMainHand().setAmount(inv.getItemInMainHand().getAmount() - 1);
+        }
+        else {
+        	inv.setItemInMainHand(null);
+        }
         if (oldItem != null) inv.addItem(new ItemStack[] { oldItem });
 
         player.sendMessage(ChatColor.AQUA + "The item in your hand has been put on your head!");
