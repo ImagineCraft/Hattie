@@ -1,6 +1,7 @@
 package cz.sycha.hattie;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -21,6 +22,7 @@ public class Main extends JavaPlugin {
 
         PlayerInventory inv = player.getInventory();
         ItemStack itemToUse = inv.getItemInMainHand().clone();
+        Material itemType = itemToUse.getType();
         itemToUse.setAmount(1);
         ItemStack oldItem = inv.getHelmet();
 
@@ -33,7 +35,7 @@ public class Main extends JavaPlugin {
         }
         if (oldItem != null) inv.addItem(new ItemStack[] { oldItem });
 
-        player.sendMessage(ChatColor.AQUA + "The item in your hand has been put on your head!");
+        player.sendMessage(ChatColor.AQUA + itemType.name() + " has been put on your head!");
 
         return true;
     }
