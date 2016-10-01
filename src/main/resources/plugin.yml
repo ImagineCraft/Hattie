@@ -1,6 +1,6 @@
 name: Hattie
 authors: [JacobCZ, beschio, sirrus86, kriation]
-version: 2.0
+version: 3.0
 main: cz.sycha.hattie.Main
 
 commands:
