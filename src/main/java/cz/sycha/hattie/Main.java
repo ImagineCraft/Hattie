@@ -40,8 +40,11 @@ public class Main extends JavaPlugin {
 			inv.setHelmet(itemToUse);
 			Material itemType = itemToUse.getType();
 			// player.sendMessage(ChatColor.AQUA + itemType.name() + " has been put on your head!");
-			
-			itemToUse.setAmount( itemAmount - 1 );
+			// Apparently, in the latest version of spigot, AIR has a zero count.
+			if( !itemType.equals( Material.AIR ) )
+			{
+				itemToUse.setAmount( itemAmount - 1 );
+			}
 			inv.setItemInMainHand( itemToUse );
 			
 			if(oldItem != null) {
