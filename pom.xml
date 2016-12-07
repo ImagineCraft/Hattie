@@ -12,7 +12,7 @@
 
     <groupId>cz.sycha</groupId>
     <artifactId>hattie</artifactId>
-    <version>3.0</version>
+    <version>3.1</version>
 
     <name>Hattie</name>
 
@@ -28,7 +28,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.10.2-R0.1-SNAPSHOT</version>
+            <version>1.11-R0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
